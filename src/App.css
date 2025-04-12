@@ -1,0 +1,93 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+/* Container for the game */
+.whack-a-mole-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #e8e8e8;
+  padding: 20px;
+}
+
+/* Title of the game */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Grid for the holes where the mole appears */
+.holes-container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Style for each hole */
+.hole {
+  width: 100px;
+  height: 100px;
+  background-color: #74c16c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* When mole is in the hole */
+.hole.active {
+  background-color: #f5b342;
+  transform: scale(1.2);
+}
+
+/* Hover effect */
+.hole:hover {
+  transform: scale(1.05);
+}
+
+/* Display the score */
+.score {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Button styles */
+.button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+.button:hover {
+  background-color: #45a049;
+}
+
+/* Button style for "Stop Game" */
+.button.destructive {
+  background-color: #f44336;
+}
+
+/* Hover effect for destructive button */
+.button.destructive:hover {
+  background-color: #e53935;
+}
